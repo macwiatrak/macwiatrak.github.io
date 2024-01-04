@@ -16,9 +16,9 @@ redirect_from:
 
 Recent News
 ======
-* Released a preprint on [GeneBac: a modular framework for antibiotic resistance prediction from DNA](https://www.biorxiv.org/content/10.1101/2024.01.03.574022v1).[04.01.2024]
+* Released a preprint on [GeneBac: a modular framework for antibiotic resistance prediction from DNA](https://www.biorxiv.org/content/10.1101/2024.01.03.574022v1). [04.01.2024]
 * Presented my work on **Fighting Antibiotic Resistance with Deep Learning** and won a runner-up award for the best talk. [28.11.2023]
-* Visited [Brbić lab](https://brbiclab.epfl.ch/) at EPFL over the summer 2023.
+* Visited [Brbić lab](https://brbiclab.epfl.ch/) at EPFL over the summer 2023. [04.09.2023]
 * Started my PhD at **Cambridge Centre for AI in Medicine (CCAIM), University of Cambridge**. [03.10.2022]
 * Joined **BenevolentAI**, a research company focused on applying AI to the drug discovery problem as Machine Learning Engineer, where I will be working on NLP alongside an amazing team of researchers, engineers and bioinformaticians.  [02.12.2019]
 * Gave a talk on **Learning to cooperate with Multi-Agent Reinforcement Learning** on ML in PL conference. University of Warsaw. [23.11.2019]
