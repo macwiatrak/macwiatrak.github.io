@@ -11,6 +11,12 @@ author_profile: true
 
 {% include base_path %}
 
+### [Sequence-based modelling of bacterial genomes enables accurate antibiotic resistance prediction](https://www.biorxiv.org/content/10.1101/2024.01.03.574022v1)
+Rapid detection of antibiotic-resistant bacteria and understanding the mechanisms underlying antimicrobial resistance (AMR) are major unsolved problems that pose significant threats to global public health. [...]
+
+**Wiatrak, M.**, Weimann, A., Dinan, A., Brbić, M., Floto, R. A.\
+In biorXiv, 2024.
+
 ### [On Masked Language Models for Contextual Link Prediction](https://aclanthology.org/2022.deelio-1.9.pdf)
 In the real world, many relational facts require context; for instance, a politician holds a given elected position only for a particular timespan. [...]
 
