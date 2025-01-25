@@ -16,6 +16,7 @@ redirect_from:
 
 Recent News
 ======
+* Over the summer 2024, I interned at [Genentech](https://www.gene.com/) in San Francisco, CA, where I had the pleasure to work in the great [Biology Research | AI Development (BRAID)](https://www.gene.com/scientists/our-scientists/braid) team. While there, I worked on building large ML models for target identification supervised by Aïcha Bentaieb.
 * Released a preprint on [GeneBac: a modular framework for antibiotic resistance prediction from DNA](https://www.biorxiv.org/content/10.1101/2024.01.03.574022v1). [04.01.2024]
 * Presented my work on **Fighting Antibiotic Resistance with Deep Learning** and won a runner-up award for the best talk. [28.11.2023]
 * Visited [Brbić lab](https://brbiclab.epfl.ch/) at EPFL over the summer 2023. [04.09.2023]
