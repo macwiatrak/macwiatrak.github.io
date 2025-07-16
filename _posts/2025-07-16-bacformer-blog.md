@@ -12,7 +12,7 @@ tags:
 Introducing **Bacformer** - foundation model for bacterial genomics modeling bacterial genome as an ordered sequence of proteins on the genome.
 
 <p align="center">
-<img src="https://github.com/macwiatrak/macwiatrak.github.io/blob/master/files/Bacformer.png" width="800" alt="Bacformer logo">
+<img src="https://github.com/macwiatrak/macwiatrak.github.io/blob/9842a55963c604c098e8f6168d27245a4bcffb8a/files/Bacformer.png" width="800" alt="Bacformer logo">
 </p>
 
 ## Bacteria – Small Cells, Big Impact
@@ -45,14 +45,14 @@ To allow our model to learn the grammar of every microbe, we assembled a corpus 
 ## The Bacformer Architecture: Encoding Genomes as Sequences of Proteins
 
 <p align="center">
-<img src="https://github.com/macwiatrak/macwiatrak.github.io/blob/master/files/bacformer_architecture.png" width="700" alt="Bacformer architecture">
+<img src="https://github.com/macwiatrak/macwiatrak.github.io/blob/9842a55963c604c098e8f6168d27245a4bcffb8a/files/bacformer_architecture.png" width="700" alt="Bacformer architecture">
 </p>
 
 How do you feed an entire genome into a machine‑learning model? Bacformer introduces a clever representation: instead of using DNA sequences directly (which can be extremely long with over 6 million base pairs), it focuses on the proteins that the genome encodes. Each bacterial genome is broken down into its list of protein sequences. Think of this as taking the genome’s “words” to be the proteins rather than the ATCGs in the DNA . This has a few advantages: proteins are the functional units (so their sequences are very informative), and protein sequences are short (genes average a few hundred amino acids, compared to a whole genome, which consists of millions of bases). Moreover, proteins have well conserved patterns (motifs, domains) that can be captured by protein language models.
 
 Bacformer builds on top of previous  protein language modeling by using  condensed representations of the protein’s properties and evolutionary relationships so called embeddings. Each protein sequence is passed through aprotein language model (here, ESM‑2) to produce such an embedding. Once every protein in a genome is converted to an embedding, Bacformer orders these vectors according to their genomic positions and feeds the sequence into a genome‑level transformer. Special tokens mark chromosome or plasmid boundaries, while rotary positional embeddings encode each protein’s exact location, ensuring the model preserves true genome architecture and gene order**.** These protein tokens are then used as input to Bacformer’s transformer, which learns the contextual relationships between proteins across the genome.
 
-#### Pretraining on Protein Families: Learning Genomic Syntax
+### Pretraining on Protein Families: Learning Genomic Syntax
 
 ![pretraining](https://github.com/macwiatrak/macwiatrak.github.io/blob/master/files/pretraining_viz.png)
 
