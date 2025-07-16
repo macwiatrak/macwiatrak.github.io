@@ -9,6 +9,8 @@ tags:
   - transformers
 ---
 
+Introducing **Bacformer** - foundation model for bacterial genomics modeling bacterial genome as an ordered sequence of proteins on the genome.
+
 <p align="center">
 <img src="../files/Bacformer.png" width="800" alt="Bacformer logo">
 </p>
