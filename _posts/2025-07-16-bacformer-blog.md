@@ -97,3 +97,5 @@ Preprint:
 Code & tutorials: [https://github.com/macwiatrak/Bacformer](https://github.com/macwiatrak/Bacformer)
 
 Pretrained model weights: [https://huggingface.co/macwiatrak](https://huggingface.co/macwiatrak)
+
+We’re always on the lookout for great collaborators and feedback. If you’d like to collaborate, feel free to DM or reach out: macwiatrak@gmail.com.
