@@ -24,9 +24,10 @@ This is the motivation behind Bacformer, a new foundation model for bacterial ge
 
 ### A Training Corpus Spanning the Bacterial Tree of Life
 
-<img src="mag_corpus.png" style="float:right; width:300px; margin:0 15px 10px 0;" alt="Figure description">
+<img src="mag_corpus.png" align="right" width="200" alt="Figure description">
 
 To allow our model to learn the grammar of every microbe, we assembled a corpus of bacterial tree of life: over 1.3 million genomes (mostly metagenome-assembled) covering ~25 000 species from more than 70 habitats—soils, oceans, hot springs, human and animal microbiomes, and many places in between—together encoding almost ~3 billion proteins. This breadth corrects long-standing taxonomic and ecological biases in public databases, ensuring Bacformer encounters an evolutionary spectrum rather than memorising a handful of disease causing bacteria. By learning from bacteria across diverse habitats, the model gains a panoramic view of genome diversity and can generalise its predictions across distant lineages, environments, and lifestyles.
+
 
 
 
