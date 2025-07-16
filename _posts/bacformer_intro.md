@@ -1,7 +1,7 @@
 # Bacformer: Learning the Language of Bacterial Genomes
 
 <p align="center">
-<img src="visualizations/Bacformer.png" width="600" alt="Figure description">
+<img src="Bacformer.png" width="800" alt="Figure description">
 </p>
 
 ## Bacteria – Small Cells, Big Impact
@@ -24,10 +24,7 @@ This is the motivation behind Bacformer, a new foundation model for bacterial ge
 
 ### A Training Corpus Spanning the Bacterial Tree of Life
 
-[//]: # (# ![mag_corpus | 250x]&#40;visualizations/mag_corpus.png&#41;)
-[//]: # (<img src="visualizations/mag_corpus.png" width="500" alt="Figure description">)
-<img src="visualizations/mag_corpus.png" style="float:right; width:180px; margin: 15px 10px 0;" alt="Figure description">
-
+<img src="mag_corpus.png" style="float:right; width:300px; margin:0 15px 10px 0;" alt="Figure description">
 
 To allow our model to learn the grammar of every microbe, we assembled a corpus of bacterial tree of life: over 1.3 million genomes (mostly metagenome-assembled) covering ~25 000 species from more than 70 habitats—soils, oceans, hot springs, human and animal microbiomes, and many places in between—together encoding almost ~3 billion proteins. This breadth corrects long-standing taxonomic and ecological biases in public databases, ensuring Bacformer encounters an evolutionary spectrum rather than memorising a handful of disease causing bacteria. By learning from bacteria across diverse habitats, the model gains a panoramic view of genome diversity and can generalise its predictions across distant lineages, environments, and lifestyles.
 
@@ -36,7 +33,7 @@ To allow our model to learn the grammar of every microbe, we assembled a corpus 
 ## The Bacformer Architecture: Encoding Genomes as Sequences of Proteins
 
 <p align="center">
-<img src="visualizations/bacformer_architecture.png" width="500" alt="Figure description">
+<img src="bacformer_architecture.png" width="700" alt="Figure description">
 </p>
 
 How do you feed an entire genome into a machine‑learning model? Bacformer introduces a clever representation: instead of using DNA sequences directly (which can be extremely long with over 6 million base pairs), it focuses on the proteins that the genome encodes. Each bacterial genome is broken down into its list of protein sequences. Think of this as taking the genome’s “words” to be the proteins rather than the ATCGs in the DNA . This has a few advantages: proteins are the functional units (so their sequences are very informative), and protein sequences are short (genes average a few hundred amino acids, compared to a whole genome, which consists of millions of bases). Moreover, proteins have well conserved patterns (motifs, domains) that can be captured by protein language models.
@@ -45,7 +42,7 @@ Bacformer builds on top of previous  protein language modeling by using  condens
 
 #### Pretraining on Protein Families: Learning Genomic Syntax
 
-![pretraining](visualizations/pretraining_viz.png)
+![pretraining](pretraining_viz.png)
 
 During pretraining, Bacformer predicts the protein family labels based on the other proteins in the genome, effectively teaching the model the evolutionary and functional rules that tie genes together. Thus, allowing the model to capture how proteins cooperate and co‑evolve within a genome. This architecture effectively contextualizes protein function: a protein in isolation might be involved in various processes, but when Bacformer sees it alongside its neighbours and the wider genomic backdrop, it can infer far more about its role.
 
@@ -54,7 +51,7 @@ Unlike DNA or protein‑based language models that rely on pre‑defined token d
 ## Leveraging whole-genome context for functional genomics tasks
 
 <p align="center">
-<img src="visualizations/results.png" width="600" alt="Figure description">
+<img src="results.png" width="900" alt="Figure description">
 </p>
 
 Bacformer can be adapted to a wide range of tasks in bacterial genomics. Remarkably, even without additional training (in a “zero-shot” setting), Bacformer’s learned representations already unlock strong performance on several fundamental problems:
@@ -71,7 +68,7 @@ To validate our results, we conducted long-read RNA sequencing for multiple dist
 ### Towards designing bacterial genomes with desired properties
 
 <p align="center">
-<img src="visualizations/genome_gen_viz.png" width="600" alt="Figure description">
+<img src="genome_gen_viz.png" width="700" alt="Figure description">
 </p>
 
 The ability to aid the design of an entire genome for a particular trait could catalyse metabolic engineering and biomanufacturing, enabling us to engineer microbes that efficiently produce medicines, biofuels, and new materials with far less trial-and-error. Bacformer demonstrated the capability to learn the underlying genomic syntax, therefore, we evaluated its generative capabilities by prompting the pretrained generative model with a set of 500 proteins. Bacformer generated a sequence of protein families spanning multiple essential protein functions and resembling the distribution of real genomes. Pushing further, we fine‑tuned Bacformer with a single conditioning token—such as “anaerobe”—and asked it to complete the genome. The resulting sequences of protein families were markedly enriched in protein families associated with the trait, such as fermentation enzymes and depleted of oxygen‑dependent pathways, showing that the model can bias its designs toward a desired physiological niche. These proofs‑of‑concept hint how Bacformer coule be used for AI‑assisted genome design pipelines, though plenty of wet‑lab validation and safety governance still stand between today’s in‑silico blueprints and engineered production strains.
