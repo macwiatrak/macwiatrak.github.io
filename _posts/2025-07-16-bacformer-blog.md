@@ -12,7 +12,7 @@ tags:
 Introducing **Bacformer** - foundation model for bacterial genomics modeling bacterial genome as an ordered sequence of proteins on the genome.
 
 <p align="center">
-<img src="https://github.com/macwiatrak/macwiatrak.github.io/blob/9842a55963c604c098e8f6168d27245a4bcffb8a/files/Bacformer.png" width="800" alt="Bacformer logo">
+<img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/Bacformer.png" width="800" alt="Bacformer logo">
 </p>
 
 ## Bacteria – Small Cells, Big Impact
