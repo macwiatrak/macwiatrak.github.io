@@ -16,7 +16,7 @@ redirect_from:
 
 Recent News
 ======
-
+* Released **Bacformer**, a foundation model for bacteria representing indivudual genomes as ordered sequences of proteins and trained on >1.3M genomes and almost 3B proteins. [[Preprint]](https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1), [[Code & tutotials]](https://github.com/macwiatrak/Bacformer), [[Blog]](https://macwiatrak.github.io/posts/2025/introducing-bacformer/), [[Pretrained weights]](https://huggingface.co/macwiatrak). 
 * Over the summer 2024 I interned at [Genentech](https://www.gene.com/) in San Francisco, CA, where I had the pleasure to work in [Biology Research AI Development (BRAID)](https://www.gene.com/scientists/our-scientists/braid) team. While there, I worked on building large ML models for target identification supervised by Aïcha Bentaieb. [12.12.2024]
 * Released a preprint on [GeneBac: a modular framework for antibiotic resistance prediction from DNA](https://www.biorxiv.org/content/10.1101/2024.01.03.574022v1). [04.01.2024]
 * Presented my work on **Fighting Antibiotic Resistance with Deep Learning** and won a runner-up award for the best talk. [28.11.2023]
