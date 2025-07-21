@@ -11,6 +11,12 @@ author_profile: true
 
 {% include base_path %}
 
+### [A contextualised protein language model reveals the functional syntax of bacterial evolution](https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1)
+Bacteria have evolved a vast diversity of functions and behaviours which are currently incompletely understood and poorly predicted from DNA sequence alone. To understand the syntax of bacterial evolution and discover genome-to-phenotype relationships, we curated over 1.3 million genomes spanning bacterial phylogenetic space, representing each as an ordered sequence of proteins which collectively were used to train a transformer-based, contextualised protein language model, Bacformer. [...]
+
+**Wiatrak, M.**, Viñas Torné, R., Ntemourtsidou, M., Dinan, A., Abelson, D.C., Arora, D., Brbić, M., Weimann, A., Floto, R. A.\
+In biorXiv, 2025.
+
 ### [Sequence-based modelling of bacterial genomes enables accurate antibiotic resistance prediction](https://www.biorxiv.org/content/10.1101/2024.01.03.574022v1)
 Rapid detection of antibiotic-resistant bacteria and understanding the mechanisms underlying antimicrobial resistance (AMR) are major unsolved problems that pose significant threats to global public health. [...]
 
