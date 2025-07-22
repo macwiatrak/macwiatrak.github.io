@@ -88,7 +88,7 @@ Bacformer demonstrates that by learning the “language” of bacterial genomes,
 
 ## Getting Started with Bacformer
 
-Preprint:
+Preprint: [https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1](https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1)
 
 Code & tutorials: [https://github.com/macwiatrak/Bacformer](https://github.com/macwiatrak/Bacformer)
 
