@@ -16,6 +16,8 @@ redirect_from:
 
 Recent News
 ======
+* Won the [Evolved Technology AIxBio hackathon](https://www.evolvedtechnology.org/) with [Bacformer v2](https://github.com/macwiatrak/Bacformer) - our model for modeling whole bacterial genomes.
+* Our work on [Systema: a framework for evaluating genetic perturbation response prediction beyond systematic variation](https://www.nature.com/articles/s41587-025-02777-8) was published in Nature Biotechnology.
 * Released **Bacformer**, a foundation model for bacteria representing indivudual genomes as ordered sequences of proteins and trained on >1.3M genomes and almost 3B proteins. [[Preprint]](https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1), [[Code & tutotials]](https://github.com/macwiatrak/Bacformer), [[Blog]](https://macwiatrak.github.io/posts/2025/introducing-bacformer/), [[Pretrained weights]](https://huggingface.co/macwiatrak). [21.07.2025]
 * Joined [5050 program](https://www.fiftyyears.com/5050) organised by [Fifty Years VC](https://www.fiftyyears.com/) and [ARIA](https://www.aria.org.uk/) helping scientists build deep tech startups. [12.03.2025]
 * Over the summer 2024 I interned at [Genentech](https://www.gene.com/) in San Francisco, CA, where I had the pleasure to work in [Biology Research AI Development (BRAID)](https://www.gene.com/scientists/our-scientists/braid) team. While there, I worked on building large ML models for target identification supervised by Aïcha Bentaieb. [12.12.2024]
