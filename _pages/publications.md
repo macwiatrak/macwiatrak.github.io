@@ -11,6 +11,12 @@ author_profile: true
 
 {% include base_path %}
 
+### [Systema: a framework for evaluating genetic perturbation response prediction beyond systematic variation]([https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1](https://www.nature.com/articles/s41587-025-02777-8))
+Predicting transcriptional responses to genetic perturbations is challenging in functional genomics. While recent methods aim to infer effects of untested perturbations, their true predictive power remains unclear. Here, we show that current methods struggle to generalize beyond systematic variation, the consistent transcriptional differences between perturbed and control cells arising from selection biases or confounders. [...]
+
+Viñas Torné, R. **Wiatrak, M.**, Piran, Z., Fan, S., Jiang, L., Teichmann, S.A., Nitzan, M., Brbić, M.\
+In Nature Biotechnology, 2025.
+
 ### [A contextualised protein language model reveals the functional syntax of bacterial evolution](https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1)
 Bacteria have evolved a vast diversity of functions and behaviours which are currently incompletely understood and poorly predicted from DNA sequence alone. To understand the syntax of bacterial evolution and discover genome-to-phenotype relationships, we curated over 1.3 million genomes spanning bacterial phylogenetic space, representing each as an ordered sequence of proteins which collectively were used to train a transformer-based, contextualised protein language model, Bacformer. [...]
 
