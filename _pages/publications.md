@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-### [Systema: a framework for evaluating genetic perturbation response prediction beyond systematic variation]([https://www.biorxiv.org/content/10.1101/2025.07.20.665723v1](https://www.nature.com/articles/s41587-025-02777-8))
+### [Systema: a framework for evaluating genetic perturbation response prediction beyond systematic variation](https://www.nature.com/articles/s41587-025-02777-8))
 Predicting transcriptional responses to genetic perturbations is challenging in functional genomics. While recent methods aim to infer effects of untested perturbations, their true predictive power remains unclear. Here, we show that current methods struggle to generalize beyond systematic variation, the consistent transcriptional differences between perturbed and control cells arising from selection biases or confounders. [...]
 
 Viñas Torné, R. **Wiatrak, M.**, Piran, Z., Fan, S., Jiang, L., Teichmann, S.A., Nitzan, M., Brbić, M.\
