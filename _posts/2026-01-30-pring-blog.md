@@ -10,7 +10,11 @@ tags:
   - dataset
 ---
 
-# From pairs to graphs: evaluating protein–protein interaction models on network biology
+## From pairs to graphs: evaluating protein–protein interaction models on network biology
+
+<div style="max-width:900px;margin:0 auto;padding:0 1rem;">
+
+<p style="font-weight:600;margin-top:0.5rem;">TL;DR: PRING evaluates PPI predictors at the network level so we can judge whether predicted interactions assemble into biologically meaningful graphs, not just get good pairwise scores.</p>
 
 Roughly a quarter of late-stage clinical failures are attributed to safety issues ([UoT](https://pmc.ncbi.nlm.nih.gov/articles/PMC12478087/)). And on the healthcare side, adverse drug reactions (ADRs) account for ~6.5% (≈1 in 16) of hospital admissions in the UK ([BMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2093926/)). It’s tempting to think one drug → one protein → one effect, but a lot of safety risk isn’t just about your target protein, it’s about the network your target lives in.
 
@@ -21,12 +25,12 @@ What happened? A common answer is biology’s “second-order effects.” Your d
 In cells, proteins don’t work in isolation: they form multi-protein machines and sit inside regulatory networks. For example, mitochondrial complex I consists of ~45 distinct proteins. Another example is transcription factor (TF) wiring: a single TF like p53 regulates several hundred genes, coordinating key cellular programs. So when you perturb one protein, you’re rarely affecting a single edge (“does A bind B?”). You’re affecting a graph: hubs, modules, complexes, and the flow of information through them.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/p53_mitochondrial_complex_I.png" alt="p53 and mitochondrial complex I" style="max-width:60%;height:auto;display:block;margin:0 auto;" />
+  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/p53_mitochondrial_complex_I.png" alt="p53 and mitochondrial complex I" style="max-width:30%;height:auto;display:block;margin:0 auto;" />
   <em style="display:block;text-align:center;margin-top:8px;">The network of p53 interactions (left, <a href="https://www.mskcc.org/research/ski/labs/scott-lowe/p53-tumor-suppressor-network">MSKCC</a>) and mitochondrial complex I (right, <a href="https://www.nature.com/articles/s41594-020-0473-x">Nature</a>).</em>
 </p>
 
 
-## The current gap: we mostly grade PPI models on pairs
+### The current gap: we mostly grade PPI models on pairs
 
 Recent years have seen strong progress in predicting protein–protein interactions (PPIs): homology/sequence-similarity tools, structure-based approaches (e.g., [Boltz-2](https://github.com/jwohlwend/boltz), [AlphaFold3](https://www.nature.com/articles/s41586-024-07487-w), [OpenFold3](https://huggingface.co/OpenFold/OpenFold3)), and protein language models (pLMs) that can be fine-tuned for interaction prediction.
 
@@ -38,7 +42,7 @@ A more useful question is:
 
 That pushes us toward reconstructing an interaction network, not just scoring pairs.
 
-## Enter PRING: network-level evaluation for PPI prediction
+### Enter PRING: network-level evaluation for PPI prediction
 
 **PRING (Protein–Protein Interaction prediction from Graphs)**, which was published at last NeurIPS, addresses this by providing a benchmark to evaluate PPI predictors at the graph level, not just pairwise classification. It comes with a curated multi-species dataset designed to reduce common pitfalls like leakage, and asks whether your model can recover both:
 
@@ -48,13 +52,13 @@ That pushes us toward reconstructing an interaction network, not just scoring pa
 At a glance, PRING contains ~21k proteins and ~200k PPIs across 4 diverse organisms, assembled from major interaction resources ([STRING](https://string-db.org/), [UniProt](https://www.uniprot.org/), [Reactome](https://reactome.org/), [IntAct](https://www.ebi.ac.uk/intact/)). To control redundancy, PRING applies sequence-similarity filtering (reported at 40%) and uses a leakage-aware split that avoids overlapping proteins between train/test. The full dataset is available on [HuggingFace](https://huggingface.co/datasets/piaolaidangqu/PRING) 🎉.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/pring_dataset_stats.png" alt="PRING dataset overview" style="max-width:55%;height:auto;display:block;margin:0 auto;" />
+  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/pring_dataset_stats.png" alt="PRING dataset overview" style="max-width:27.5%;height:auto;display:block;margin:0 auto;" />
   <em style="display:block;text-align:center;margin-top:8px;">PRING dataset overview (<a href="https://arxiv.org/abs/2507.05101">PRING paper</a>).</em>
 </p>
 
 
 
-## Topology-oriented tasks: does the predicted network look like a true network?
+### Topology-oriented tasks: does the predicted network look like a true network?
 
 Pairwise accuracy can tell you whether you got many edges right, but not whether those edges assemble into a plausible network. PRING tests this with tasks such as:
 
@@ -63,8 +67,7 @@ Pairwise accuracy can tell you whether you got many edges right, but not whether
 
 Predicted networks are compared to ground truth using intuitive graph-level checks such as graph similarity (do we recover the same edges) and degree distribution (do we get realistic hubs vs a “hairball”), among others.
 
-## Function-oriented tasks: does the predicted network support known biology?
-
+### Function-oriented tasks: does the predicted network support known biology?
 Even if a predicted network looks plausible, the key question is whether it supports downstream reasoning. PRING includes tasks like:
 
 - **GO module analysis:** do network communities correspond to coherent biological functions? If a community contains proteins involved in the same process, it’s a sign the structure is meaningful.
@@ -72,19 +75,19 @@ Even if a predicted network looks plausible, the key question is whether it supp
 
 PRING quantifies these with module-level alignment and centrality-based separability.
 
-## Benchmarking diverse PPI methods
+### Benchmarking diverse PPI methods
 
 PRING evaluates sequence-similarity baselines, “classic” deep sequence models (including physicochemical features), PLM-based approaches, and structure-based methods. The headline takeaway isn’t “one model wins forever.” It’s that strong pairwise performance doesn’t guarantee strong network behavior, and even the best models still struggle to fully recover both topology and biological function.
 
 PRING makes this visible by exposing failure modes that AUC can hide: networks that are too dense or too fragmented, miss key hubs, or fail to preserve coherent functional modules.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/pring_true_vs_predicted_graph.png" alt="True vs Predicted PPI subgraph" style="max-width:70%;height:auto;display:block;margin:0 auto;" />
+  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/pring_true_vs_predicted_graph.png" alt="True vs Predicted PPI subgraph" style="max-width:35%;height:auto;display:block;margin:0 auto;" />
   <em style="display:block;text-align:center;margin-top:8px;">True vs Predicted PPI subgraph using <a href="https://huggingface.co/chaidiscovery/chai-1">Chai-1</a> structural model (<a href="https://arxiv.org/abs/2507.05101">PRING paper</a>).</em>
 </p>
 
 
-## Bridging the gap: from pairs to systems biology
+### Bridging the gap: from pairs to systems biology
 
 PRING pushes PPI modeling toward what real applications need:
 
@@ -104,4 +107,6 @@ Use a PRING network explorer to visualize true vs predicted PPI graphs:
 ></script>
 
 <gradio-app src="https://macwiatrak-pring-from-pairs-to-graphs-rethinking-ppi.hf.space"></gradio-app>
+
+</div>
 
