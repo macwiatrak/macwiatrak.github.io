@@ -9,12 +9,11 @@ tags:
   - benchmark
   - dataset
 ---
-
-## From pairs to graphs: evaluating protein–protein interaction models on network biology
-
 <div style="max-width:900px;margin:0 auto;padding:0 1rem;">
 
-<p style="font-weight:600;margin-top:0.5rem;">TL;DR: PRING evaluates PPI predictors at the network level so we can judge whether predicted interactions assemble into biologically meaningful graphs, not just get good pairwise scores.</p>
+**TL;DR**: PRING evaluates PPI predictors at the network level so we can judge whether predicted interactions assemble into biologically meaningful graphs, not just get good pairwise scores.
+
+## From pairs to graphs: evaluating protein–protein interaction models on network biology
 
 Roughly a quarter of late-stage clinical failures are attributed to safety issues ([UoT](https://pmc.ncbi.nlm.nih.gov/articles/PMC12478087/)). And on the healthcare side, adverse drug reactions (ADRs) account for ~6.5% (≈1 in 16) of hospital admissions in the UK ([BMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2093926/)). It’s tempting to think one drug → one protein → one effect, but a lot of safety risk isn’t just about your target protein, it’s about the network your target lives in.
 
@@ -106,7 +105,7 @@ Use a PRING network explorer to visualize true vs predicted PPI graphs:
 	src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js"
 ></script>
 
-<gradio-app src="https://macwiatrak-pring-from-pairs-to-graphs-rethinking-ppi.hf.space"></gradio-app>
+<gradio-app src="https://macwiatrak-pring-from-pairs-to-graphs-rethinking-ppi.hf.space" style="max-width:900px;margin:0 auto;display:block;"></gradio-app>
 
 </div>
 
