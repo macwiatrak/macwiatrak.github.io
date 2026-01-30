@@ -1,7 +1,6 @@
 ---
 title: 'From pairs to graphs: evaluating protein–protein interaction models on network biology'
 date: 2026-01-30
-layout: post
 permalink: /2026/01/30/pring-from-pairs-to-graphs/
 tags:
   - PPI
