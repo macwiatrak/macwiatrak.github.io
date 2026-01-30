@@ -22,7 +22,7 @@ What happened? A common answer is biology’s “second-order effects.” Your d
 In cells, proteins don’t work in isolation: they form multi-protein machines and sit inside regulatory networks. For example, mitochondrial complex I consists of ~45 distinct proteins. Another example is transcription factor (TF) wiring: a single TF like p53 regulates several hundred genes, coordinating key cellular programs. So when you perturb one protein, you’re rarely affecting a single edge (“does A bind B?”). You’re affecting a graph: hubs, modules, complexes, and the flow of information through them.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/p53_mitochondrial_complex_I.png" alt="p53 and mitochondrial complex I" style="max-width:60%;height:auto;display:block;margin:0 auto;" />
+  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/p53_mitochondrial_complex_I.png" alt="p53 and mitochondrial complex I" style="max-width:80%;height:auto;display:block;margin:0 auto;" />
   <em style="display:block;text-align:center;margin-top:8px;">The network of p53 interactions (left, <a href="https://www.mskcc.org/research/ski/labs/scott-lowe/p53-tumor-suppressor-network">MSKCC</a>) and mitochondrial complex I (right, <a href="https://www.nature.com/articles/s41594-020-0473-x">Nature</a>).</em>
 </p>
 
@@ -79,7 +79,7 @@ PRING evaluates sequence-similarity baselines, “classic” deep sequence model
 PRING makes this visible by exposing failure modes that AUC can hide: networks that are too dense or too fragmented, miss key hubs, or fail to preserve coherent functional modules.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/pring_true_vs_predicted_graph.png" alt="True vs Predicted PPI subgraph" style="max-width:70%;height:auto;display:block;margin:0 auto;" />
+  <img src="https://raw.githubusercontent.com/macwiatrak/macwiatrak.github.io/master/files/pring_true_vs_predicted_graph.png" alt="True vs Predicted PPI subgraph" style="max-width:80%;height:auto;display:block;margin:0 auto;" />
   <em style="display:block;text-align:center;margin-top:8px;">True vs Predicted PPI subgraph using <a href="https://huggingface.co/chaidiscovery/chai-1">Chai-1</a> structural model (<a href="https://arxiv.org/abs/2507.05101">PRING paper</a>).</em>
 </p>
 
@@ -98,12 +98,10 @@ In summary, PRING lets the community compare models on what matters in practice:
 
 Use a PRING network explorer to visualize true vs predicted PPI graphs:
 
-<!-- <script
+<script
 	type="module"
 	src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js"
 ></script>
 
-<gradio-app src="https://macwiatrak-pring-from-pairs-to-graphs-rethinking-ppi.hf.space" style="max-width:900px;margin:0 auto;display:block;"></gradio-app>
-
-</div> -->
+<gradio-app src="https://macwiatrak-pring-from-pairs-to-graphs-rethinking-ppi.hf.space"></gradio-app>
 
