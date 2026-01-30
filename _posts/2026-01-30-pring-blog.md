@@ -1,7 +1,8 @@
 ---
-title: 'From pairs  to graphs: evaluating protein–protein interaction models on network biology'
-date: 2026-30-01
-permalink: /posts/2025/PRING-from-pairs-to-graphs/
+title: 'From pairs to graphs: evaluating protein–protein interaction models on network biology'
+date: 2026-01-30
+layout: post
+permalink: /2026/01/30/pring-from-pairs-to-graphs/
 tags:
   - PPI
   - BioML
@@ -9,7 +10,7 @@ tags:
   - dataset
 ---
 
-# From pairs  to graphs: evaluating protein–protein interaction models on network biology
+# From pairs to graphs: evaluating protein–protein interaction models on network biology
 
 Roughly a quarter of late-stage clinical failures are attributed to safety issues ([UoT](https://pmc.ncbi.nlm.nih.gov/articles/PMC12478087/)). And on the healthcare side, adverse drug reactions (ADRs) account for ~6.5% (≈1 in 16) of hospital admissions in the UK ([BMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2093926/)). It’s tempting to think one drug → one protein → one effect, but a lot of safety risk isn’t just about your target protein, it’s about the network your target lives in.
 
